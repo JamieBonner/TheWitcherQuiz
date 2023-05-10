@@ -113,7 +113,7 @@ function getNewQuestion() {
             window.location.href = "completed.html";
     }
     
-    const questionsIndex = i=0; i<questions.length; i++;
+    const questionsIndex = Math.floor(Math.random() * availibleQuestions.length);
     currentQuestion = availibleQuestions[questionsIndex];
     question.innerText = currentQuestion.question;
     
@@ -143,7 +143,7 @@ function getNewQuestion() {
         if (isCorrect) {  
         alert("Well done you have answered correctly");
         incrementScore();
-         } else { 
+        } else { 
         alert("You answered incorrectly");
     }
     
